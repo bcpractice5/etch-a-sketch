@@ -1,17 +1,45 @@
+* {box-sizing: border-box;}
 body {
     height: 100vh;
     width: 100vw;
     margin: 0;
+    color: white;
     background-color: #111;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.grid-container {
+.column {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 30vw;
+    height: auto;
+}
+
+.column > * {
     margin: auto;
-    height: 80vh;
-    width: 80vh;
+
+
+}
+
+label {font-size: xx-large;}
+
+input {font-size: large;}
+
+button {
+    border: none;
+    font-size: larger;
+    font-family: monospace;
+}
+
+.grid-container {
+    margin: auto 0;
+    height: 90vh;
+    width: 90vh;
     background-color: black;
     display: grid;
     grid-template-columns: repeat(16, auto);
@@ -19,9 +47,11 @@ body {
 }
 
 .grid-container > div {
-    background-color: #DDD;
+    background-color: #E5E5E5;
+    border: 1px solid #DFDFDF;
 }
 
-.grid-container > div:hover {
+.hovered {
     background-color: #222;
+    border: none;
 }
